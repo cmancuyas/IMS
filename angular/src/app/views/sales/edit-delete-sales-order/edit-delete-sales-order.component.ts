@@ -56,7 +56,6 @@ export class EditDeleteSalesOrderComponent {
   }
   getPageType() {
     let title = this.activatedRoute.snapshot.data['title'];
-    // debugger;
     if (title == 'Delete Sales Order') {
       this.editPage = false;
       this.colorButton = 'danger';
@@ -71,7 +70,6 @@ export class EditDeleteSalesOrderComponent {
       this.salesOrderService.getSalesOrder(this.salesOrderId).subscribe({
         next: (response: any) => {
           this.salesOrder = response.result;
-          // debugger;
           this.buildForm();
         },
         error: (error: any) => {
