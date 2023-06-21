@@ -1,0 +1,73 @@
+<c-col xs="12">
+  <c-card class="mb-4">
+    <c-card-header ngPreserveWhitespaces>
+      <strong>{{ editPage ? "Edit" : "Delete" }}</strong> <small>Branch</small>
+    </c-card-header>
+    <c-card-body>
+      <form
+        [formGroup]="editBranchForm"
+        #customStylesForm="ngForm"
+        (ngSubmit)="onSubmit()"
+        [validated]="customStylesValidated"
+        cForm
+        class="row g-3 needs-validation"
+      >
+        <c-col md="4">
+          <label cLabel for="validationCustom01">Name</label>
+          <input
+            formControlName="name"
+            cFormControl
+            id="validationCustom01"
+            required
+            type="text"
+            [value]="branchName"
+            [disabled]="
+              editPage
+                ? editBranchForm.untouched || editBranchForm.invalid
+                : editBranchForm.invalid
+            "
+          />
+          <c-form-feedback [valid]="true">Looks good!</c-form-feedback>
+        </c-col>
+
+        <c-col xs="12">
+          <button
+            cButton
+            class="me-1"
+            (click)="toggleToast()"
+            [color]="colorButton"
+            type="submit"
+          >
+            {{ editPage ? "Save" : "Delete" }}
+          </button>
+          <button
+            routerLink="/master-data/branches"
+            cButton
+            color="secondary"
+            type="reset"
+          >
+            Back
+          </button>
+        </c-col>
+      </form>
+    </c-card-body>
+  </c-card>
+</c-col>
+<c-toaster [placement]="position" class="p-3" position="fixed">
+  <c-toast
+    [color]="toastrColor"
+    (timer)="onTimerChange($event)"
+    (visibleChange)="onVisibleChange($event)"
+    [visible]="visible"
+  >
+    <c-toast-header> Edit Branch </c-toast-header>
+    <c-toast-body>
+      <p *ngFor="let error of errorMessages">
+        {{ error }}
+      </p>
+      <c-progress thin>
+        <c-progress-bar [value]="percentage"></c-progress-bar>
+      </c-progress>
+    </c-toast-body>
+  </c-toast>
+</c-toaster>

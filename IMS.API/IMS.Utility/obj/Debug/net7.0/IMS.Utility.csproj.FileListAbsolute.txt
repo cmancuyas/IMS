@@ -1,0 +1,12 @@
+D:\Programming\projects\Inventory-Management-System\IMS.API\IMS.Utility\bin\Debug\net7.0\IMS.Utility.deps.json
+D:\Programming\projects\Inventory-Management-System\IMS.API\IMS.Utility\bin\Debug\net7.0\IMS.Utility.dll
+D:\Programming\projects\Inventory-Management-System\IMS.API\IMS.Utility\bin\Debug\net7.0\IMS.Utility.pdb
+D:\Programming\projects\Inventory-Management-System\IMS.API\IMS.Utility\obj\Debug\net7.0\IMS.Utility.csproj.AssemblyReference.cache
+D:\Programming\projects\Inventory-Management-System\IMS.API\IMS.Utility\obj\Debug\net7.0\IMS.Utility.GeneratedMSBuildEditorConfig.editorconfig
+D:\Programming\projects\Inventory-Management-System\IMS.API\IMS.Utility\obj\Debug\net7.0\IMS.Utility.AssemblyInfoInputs.cache
+D:\Programming\projects\Inventory-Management-System\IMS.API\IMS.Utility\obj\Debug\net7.0\IMS.Utility.AssemblyInfo.cs
+D:\Programming\projects\Inventory-Management-System\IMS.API\IMS.Utility\obj\Debug\net7.0\IMS.Utility.csproj.CoreCompileInputs.cache
+D:\Programming\projects\Inventory-Management-System\IMS.API\IMS.Utility\obj\Debug\net7.0\IMS.Utility.dll
+D:\Programming\projects\Inventory-Management-System\IMS.API\IMS.Utility\obj\Debug\net7.0\refint\IMS.Utility.dll
+D:\Programming\projects\Inventory-Management-System\IMS.API\IMS.Utility\obj\Debug\net7.0\IMS.Utility.pdb
+D:\Programming\projects\Inventory-Management-System\IMS.API\IMS.Utility\obj\Debug\net7.0\ref\IMS.Utility.dll

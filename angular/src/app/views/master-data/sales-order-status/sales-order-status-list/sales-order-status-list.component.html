@@ -1,0 +1,83 @@
+<c-row>
+  <c-col xs>
+    <c-card class="mb-4">
+      <c-card-header
+        >Sales Order Status
+        <button
+          routerLink="/master-data/sales-order-status/add"
+          cButton
+          class="me-1 float-end"
+          color="primary"
+          value="Add"
+        >
+          Add
+        </button>
+      </c-card-header>
+      <c-card-body>
+        <table
+          [hover]="true"
+          [responsive]="true"
+          [striped]="true"
+          align="middle"
+          cTable
+          class="mb-0 border"
+        >
+          <thead cTableColor="light">
+            <tr>
+              <th>Name</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let status of salesOrderStatus; index as i">
+              <td>
+                <div>{{ status.name }}</div>
+              </td>
+
+
+              <td>
+                <button
+                  [routerLink]="['/master-data/sales-order-status/edit', status.id]"
+                  cButton
+                  class="me-1"
+                  color="success"
+                  type="submit"
+                  value="Edit"
+                >
+                  Edit
+                </button>
+                <button
+                  [routerLink]="['/master-data/sales-order-status/delete', status.id]"
+                  cButton
+                  class="me-1"
+                  color="danger"
+                  type="submit"
+                  value="Delete"
+                >
+                  Delete
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </c-card-body>
+      <c-pagination align="center" aria-label="Page navigation example">
+        <li cPageItem [disabled]="true">
+          <a cPageLink [routerLink]>Previous</a>
+        </li>
+        <li cPageItem>
+          <a cPageLink [routerLink]>1</a>
+        </li>
+        <li cPageItem>
+          <a cPageLink [routerLink]>2</a>
+        </li>
+        <li cPageItem>
+          <a cPageLink [routerLink]>3</a>
+        </li>
+        <li cPageItem>
+          <a cPageLink [routerLink]>Next</a>
+        </li>
+      </c-pagination>
+    </c-card>
+  </c-col>
+</c-row>
